@@ -5,5 +5,25 @@
 </head>
 <body>
     <h1>Leve</h1>
+    <input type="text" id="search" placeholder="It's time to Leve...">
+<button onclick="searchEvents()">Leve</button>
+    <script>
+function searchEvents() {
+    var searchKeyword = document.getElementById("search").value; // Hämta sökordet från textinmatningsfältet
+    // Här kan du lägga till kod för att hantera sökningen och filtrera evenemangen baserat på sökordet.
+    // Du kan visa eller dölja evenemang i listan beroende på om de matchar sökordet.
+}
+</script>
+    <div id="event-list">
+    <h2>Evenemang</h2>
+    <ul>
+        <li>
+            <h3>Konsert: Artistnamn</h3>
+            <p>Datum: XX/XX/XXXX</p>
+            <p>Plats: Platsnamn</p>
+        </li>
+        <!-- Upprepa detta för fler evenemang -->
+    </ul>
+</div>
 </body>
 </html>
