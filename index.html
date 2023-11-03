@@ -4,40 +4,49 @@
     <title>Min GitHub Pages-webbplats</title>
 </head>
 <body>
+    <h1>Leve</h1>
     <div id="search-section">
-        <h2>Sök evenemang</h2>
-        <input type="text" id="search" placeholder="Sök efter evenemang...">
-        <button onclick="searchEvents()">Sök</button>
-    </div>
+    <h2>Sök evenemang</h2>
+    <input type="text" id="search" placeholder="Sök efter evenemang...">
+    <button onclick="searchEvents()">Sök</button>
+</div>
 
-    <div id="event-list">
-        <h2>Evenemang</h2>
-        <ul>
-            <li>
-                <h3>Konsert: Artistnamn</h3>
-                <p>Datum: XX/XX/XXXX</p>
-                <p>Plats: Platsnamn</p>
-            </li>
-            <!-- Upprepa detta för fler evenemang -->
-        </ul>
-    </div>
+<ul id="event-list">
+    <li>
+        <h3>Konsert: Artistnamn</h3>
+        <p>Datum: XX/XX/XXXX</p>
+        <p>Plats: Platsnamn</p>
+    </li>
+    <!-- Upprepa detta för fler evenemang -->
+</ul>
 
-    <script>
-    function searchEvents() {
-        var searchKeyword = document.getElementById("search").value.toLowerCase(); // Hämta sökordet och gör det gemener
+<script>
+function searchEvents() {
+    var searchKeyword = document.getElementById("search").value.toLowerCase(); // Hämta sökordet och gör det gemener
 
-        var events = document.getElementById("event-list").getElementsByTagName("li");
+    var events = document.getElementById("event-list").getElementsByTagName("li");
 
-        for (var i = 0; i < events.length; i++) {
-            var event = events[i];
-            var eventTitle = event.getElementsByTagName("h3")[0].innerText.toLowerCase(); // Hämta evenemangets titel och gör den gemener
-            if (eventTitle.includes(searchKeyword)) {
-                event.style.display = "block"; // Visa evenemang som innehåller sökordet
-            } else {
-                event.style.display = "none"; // Dölj evenemang som inte matchar sökordet
-            }
+    for (var i = 0; i < events.length; i++) {
+        var event = events[i];
+        var eventTitle = event.getElementsByTagName("h3")[0].innerText.toLowerCase(); // Hämta evenemangets titel och gör den gemener
+        if (eventTitle.includes(searchKeyword)) {
+            event.style.display = "block"; // Visa evenemang som innehåller sökordet
+        } else {
+            event.style.display = "none"; // Dölj evenemang som inte matchar sökordet
         }
     }
-    </script>
+}
+</script>
+    <div id="event-list">
+    <h2>Evenemang</h2>
+    <ul>
+        <li>
+            <h3>Konsert: Artistnamn</h3>
+            <p>Datum: XX/XX/XXXX</p>
+            <p>Plats: Platsnamn</p>
+        </li>
+        <!-- Upprepa detta för fler evenemang -->
+    </ul>
+</div>
 </body>
 </html>
